@@ -16,14 +16,22 @@ public class JackOLantern {
     }
 
     public void fill(String str){
-        for(String[] i : faceFeatures){
-
+        for(int i = 0; i < this.faceFeatures.length; i++){
+            for(int j = 0; j < this.faceFeatures[i].length; j++){
+                faceFeatures[i][j] = str;
+            }
         }
     }
 
     @Override
     public String toString() {
         String fullimage = "";
-        for (int i = 0, i < )
+        for(int i = 0; i < this.faceFeatures.length; i++){
+            for(int j = 0; j < this.faceFeatures[i].length; j++){
+                fullimage += faceFeatures[i][j];
+            }
+            fullimage += "\n";
+        }
+        return fullimage;
     }
 }
